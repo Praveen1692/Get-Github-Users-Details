@@ -1,0 +1,41 @@
+.github-wrapper{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.5px solid red;
+    text-align: center;
+    padding-bottom: 50px;
+   margin-top: 12px;
+    
+}
+
+.username-input{
+    padding: 8px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.btn{
+    outline: none;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    margin: 20px 0;
+    width: 150px;
+    background-color: black;
+    cursor: pointer;
+
+} 
+
+.user-wrapper{
+    width: 500px;
+    height: 340px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-wrapper img{
+    width: 150px;
+}
