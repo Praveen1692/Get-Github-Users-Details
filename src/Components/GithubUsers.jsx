@@ -10,6 +10,7 @@ function GithubUsers(){
     const[userData,setUserData]=useState({});
     const[name,setName]=useState('');
     const inputRef=createRef();
+    const [error, setError] = useState(null);
 
 
 
@@ -19,9 +20,13 @@ function GithubUsers(){
         .then((response)=>{
            setUserData(response.data)
         })
-        .catch((error)=>{
-            console.log(error.message);
-        })
+
+        .catch(error => {
+            setError(error.message);
+          });
+
+
+
         inputRef.current.value='';
         setName('');
     }
@@ -39,6 +44,8 @@ function GithubUsers(){
 
         <button onClick={getUserInfo} className='btn'>Get Info</button>
         <br/>  <br />
+
+        {error && <h3>{error}</h3>}
 
         <UserCard userData={userData} />
         
